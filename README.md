@@ -1,6 +1,6 @@
 # Savings-Investments
 
-Applicatiom to keep a control of your economic savings and investments
+Application to keep a control of your economic savings and investments
 
 # Run project
 
