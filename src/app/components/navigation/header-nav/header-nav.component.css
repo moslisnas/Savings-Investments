@@ -1,0 +1,16 @@
+nav {
+  min-width: 100vw;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+ul li {
+  text-align: center;
+  list-style: none;
+  font-size: 32px;
+  font-weight: bold;
+}
