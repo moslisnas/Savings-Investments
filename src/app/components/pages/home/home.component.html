@@ -1,0 +1,49 @@
+<div>
+  <h1>Saving & Investments</h1>
+  <p class="spaced-after">
+    Create your own templates to control your economic savings and investments.
+    You can add several incomes, essential expenses, unnecesary expenses and
+    optionally you can define you saving plan of your template.
+  </p>
+  <p class="spaced-after">
+    Also you can define your own expense types and classify them into: essential
+    expense or unnecesary expent.
+  </p>
+  @if(lastTemplate){
+  <div>
+    <p class="centered template-name">{{ lastTemplate }}</p>
+  </div>
+  } @else {
+  <p class="centered template-name">You don't have created templates</p>
+  }
+  <div class="centered create-button">
+    <button><a [routerLink]="['template/create']">+</a></button> Create
+    template
+  </div>
+
+  <!--
+    <h2>List of expense income types</h2>
+    @if(expenseIncomeTypes.length > 0){
+    <div>
+      <ul>
+        @for(expenseIncomeType of expenseIncomeTypes; track $index){
+        <li>1 {{ expenseIncomeType.abbreviation }}</li>
+        }
+      </ul>
+    </div>
+    } @else {
+    <p>No data of expense income types</p>
+    }
+    <h2>List of investment types</h2>
+    @if(investmentTypes.length > 0){
+    <div>
+      <ul>
+        @for(investmentType of investmentTypes; track $index){
+        <li>1 {{ investmentType.abbreviation }}</li>
+        }
+      </ul>
+    </div>
+    } @else {
+    <p>No data of investment types</p>
+    }-->
+</div>

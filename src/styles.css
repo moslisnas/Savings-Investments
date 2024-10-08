@@ -8,3 +8,15 @@ body{
 .spaced-after{
     margin-bottom: 5px;
 }
+.buttonFormContainer{
+    padding: 20px;
+    text-align: center;
+}
+.buttonFormContainer button{
+    margin: 5px;
+    text-align: center;
+}
+.buttonFormContainer button a{
+    text-decoration: none;
+    color: black;
+}
