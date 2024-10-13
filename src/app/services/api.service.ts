@@ -17,6 +17,9 @@ export class ApiService {
   getInvestmentTypes(): Observable<any> {
     return this.http.get(`${this.apiUrl}/investment_type`);
   }
+  getTemplates(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/template`);
+  }
 
   //POST, PUT, DELETE methods
   //...

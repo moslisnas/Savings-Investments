@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { ApiService } from '../../../services/api.service';
 
 @Component({
-  selector: 'app-template',
+  selector: 'app-index-template',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './template.component.html',
-  styleUrl: './template.component.css'
+  imports: [],
+  templateUrl: './index-template.component.html',
+  styleUrl: './index-template.component.css',
 })
-export class TemplateComponent implements OnInit {
+export class IndexTemplateComponent implements OnInit {
   templates: any[] = [];
 
   constructor(private apiService: ApiService) {}
