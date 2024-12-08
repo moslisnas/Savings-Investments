@@ -14,6 +14,8 @@ export class ViewTemplateComponent implements OnInit {
   template: any = null; //TODO Add class type
   templateIncomes: any = null; //TODO Add class type
   templateExpenses: any = null; //TODO Add class type
+  templateEssentialExpenses: any = new Array(); //TODO Add class type
+  templateUnnecesaryExpenses: any = new Array(); //TODO Add class type
 
   constructor(private apiService: ApiService, private route: ActivatedRoute) {}
 
@@ -62,6 +64,14 @@ export class ViewTemplateComponent implements OnInit {
                   console.error('Error al obtener los datos', error);
                 },
               });
+              //Essential expenses
+              if(expense.expense_income_type == 2){
+                this.templateEssentialExpenses.push(expense);
+              }
+              //Unnecesary expenses
+              else if(expense.expense_income_type == 3){
+                this.templateUnnecesaryExpenses.push(expense);
+              }
             });
           },
           error: (error) => {

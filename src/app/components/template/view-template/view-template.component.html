@@ -17,18 +17,38 @@
     }
 </table>
 
-<h2>Expense</h2>
+@if(templateEssentialExpenses.length > 0){
+<h2>Essential expenses</h2>
 <table>
     <tr>
         <th>Expense type</th>
         <th>Date</th>
         <th>Value</th>
     </tr>
-    @for(templateExpense of templateExpenses; track $index){
+    @for(templateEssentialExpense of templateEssentialExpenses; track $index){
         <tr>
-            <td>{{templateExpense.expense_type_name}}</td>
-            <td>{{templateExpense.date}}</td>
-            <td>{{templateExpense.value}}</td>
+            <td>{{templateEssentialExpense.expense_type_name}}</td>
+            <td>{{templateEssentialExpense.date}}</td>
+            <td>{{templateEssentialExpense.value}}</td>
         </tr>
     }
 </table>
+}
+
+@if(templateUnnecesaryExpenses.length > 0){
+<h2>Unnecesary expenses</h2>
+<table>
+    <tr>
+        <th>Expense type</th>
+        <th>Date</th>
+        <th>Value</th>
+    </tr>
+    @for(templateUnnecesaryExpense of templateUnnecesaryExpenses; track $index){
+        <tr>
+            <td>{{templateUnnecesaryExpense.expense_type_name}}</td>
+            <td>{{templateUnnecesaryExpense.date}}</td>
+            <td>{{templateUnnecesaryExpense.value}}</td>
+        </tr>
+    }
+</table>
+}
