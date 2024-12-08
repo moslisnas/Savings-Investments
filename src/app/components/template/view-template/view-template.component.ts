@@ -1,11 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../../services/api.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-view-template',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './view-template.component.html',
   styleUrl: './view-template.component.css'
 })
@@ -16,6 +16,7 @@ export class ViewTemplateComponent implements OnInit {
   templateExpenses: any = null; //TODO Add class type
   templateEssentialExpenses: any = new Array(); //TODO Add class type
   templateUnnecesaryExpenses: any = new Array(); //TODO Add class type
+  templateSavings: any = new Array(); //TODO Add class type
 
   constructor(private apiService: ApiService, private route: ActivatedRoute) {}
 
@@ -71,6 +72,10 @@ export class ViewTemplateComponent implements OnInit {
               //Unnecesary expenses
               else if(expense.expense_income_type == 3){
                 this.templateUnnecesaryExpenses.push(expense);
+              }
+              //Saving
+              else if(expense.expense_income_type == 4){
+                this.templateSavings.push(expense);
               }
             });
           },

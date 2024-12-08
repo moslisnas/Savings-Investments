@@ -17,6 +17,12 @@ export class ApiService {
   getInvestmentTypes(): Observable<any> {
     return this.http.get(`${this.apiUrl}/investment_type`);
   }
+  getIncomeTypes(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/income_type`);
+  }
+  getExpenseTypes(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/expense_type`);
+  }
   getTemplates(): Observable<any> {
     return this.http.get(`${this.apiUrl}/template`);
   }

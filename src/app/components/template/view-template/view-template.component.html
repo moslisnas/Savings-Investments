@@ -52,3 +52,24 @@
     }
 </table>
 }
+
+@if(templateSavings.length > 0){
+<h2>Saving</h2>
+<table>
+    <tr>
+        <th>Saving type</th>
+        <th>Date</th>
+        <th>Value</th>
+    </tr>
+    @for(templateSaving of templateSavings; track $index){
+        <tr>
+            <td>{{templateSaving.expense_type_name}}</td>
+            <td>{{templateSaving.date}}</td>
+            <td>{{templateSaving.value}}</td>
+        </tr>
+    }
+</table>
+}
+<div class="buttonFormContainer">
+    <button type="button"><a [routerLink]="['/template']">Cancel</a></button>
+</div>
