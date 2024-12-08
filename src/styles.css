@@ -1,3 +1,4 @@
+/*General*/
 body{
     margin: 0;
     padding: 0;
@@ -8,6 +9,8 @@ body{
 .spaced-after{
     margin-bottom: 5px;
 }
+/*Forms*/
+/*Buttons*/
 .buttonFormContainer{
     padding: 20px;
     text-align: center;

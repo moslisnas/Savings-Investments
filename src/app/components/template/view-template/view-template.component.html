@@ -1,0 +1,34 @@
+<h1>{{template ? template.name : ""}}</h1>
+<h2>Income</h2>
+<table>
+    <tr>
+        <th>Income type</th>
+        <th>From</th>
+        <th>Date</th>
+        <th>Value</th>
+    </tr>
+    @for(templateIncome of templateIncomes; track $index){
+        <tr>
+            <td>{{templateIncome.income_type_name}}</td>
+            <td>{{templateIncome.from}}</td>
+            <td>{{templateIncome.date}}</td>
+            <td>{{templateIncome.value}}</td>
+        </tr>
+    }
+</table>
+
+<h2>Expense</h2>
+<table>
+    <tr>
+        <th>Expense type</th>
+        <th>Date</th>
+        <th>Value</th>
+    </tr>
+    @for(templateExpense of templateExpenses; track $index){
+        <tr>
+            <td>{{templateExpense.expense_type_name}}</td>
+            <td>{{templateExpense.date}}</td>
+            <td>{{templateExpense.value}}</td>
+        </tr>
+    }
+</table>

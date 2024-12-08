@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../../services/api.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-index-template',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './index-template.component.html',
   styleUrl: './index-template.component.css',
 })

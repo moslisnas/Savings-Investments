@@ -5,7 +5,7 @@
   <ul>
     @for(template of templates; track $index){
     <li>
-      <a href="/template?id={{ template.id }}">{{ template.name }}</a>
+      <a [routerLink]="['/template/view', template.id]">{{ template.name }}</a>
     </li>
     }
   </ul>
@@ -14,5 +14,5 @@
 <p>No data of templates</p>
 }
 <div class="centered create-button">
-  <button><a href="/template/create">+</a></button> Create template
+  <button><a [routerLink]="['/template/create']">+</a></button> Create template
 </div>
