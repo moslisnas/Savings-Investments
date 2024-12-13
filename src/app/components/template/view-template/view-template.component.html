@@ -9,7 +9,7 @@
     </tr>
     @for(templateIncome of templateIncomes; track $index){
         <tr>
-            <td>{{templateIncome.income_type_name}}</td>
+            <td>{{templateIncome.incomeTypeName}}</td>
             <td>{{templateIncome.from}}</td>
             <td>{{templateIncome.date}}</td>
             <td>{{templateIncome.value}}</td>
@@ -27,7 +27,7 @@
     </tr>
     @for(templateEssentialExpense of templateEssentialExpenses; track $index){
         <tr>
-            <td>{{templateEssentialExpense.expense_type_name}}</td>
+            <td>{{templateEssentialExpense.expenseTypeName}}</td>
             <td>{{templateEssentialExpense.date}}</td>
             <td>{{templateEssentialExpense.value}}</td>
         </tr>
@@ -45,7 +45,7 @@
     </tr>
     @for(templateUnnecesaryExpense of templateUnnecesaryExpenses; track $index){
         <tr>
-            <td>{{templateUnnecesaryExpense.expense_type_name}}</td>
+            <td>{{templateUnnecesaryExpense.expenseTypeName}}</td>
             <td>{{templateUnnecesaryExpense.date}}</td>
             <td>{{templateUnnecesaryExpense.value}}</td>
         </tr>
@@ -63,7 +63,7 @@
     </tr>
     @for(templateSaving of templateSavings; track $index){
         <tr>
-            <td>{{templateSaving.expense_type_name}}</td>
+            <td>{{templateSaving.expenseTypeName}}</td>
             <td>{{templateSaving.date}}</td>
             <td>{{templateSaving.value}}</td>
         </tr>

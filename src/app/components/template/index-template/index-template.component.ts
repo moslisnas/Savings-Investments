@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../../services/api.service';
 import { RouterLink } from '@angular/router';
+import { Template } from '../../../models/Template';
 
 @Component({
   selector: 'app-index-template',
@@ -10,7 +11,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './index-template.component.css',
 })
 export class IndexTemplateComponent implements OnInit {
-  templates: any[] = [];
+  templates: Template[] = [];
 
   constructor(private apiService: ApiService) {}
 

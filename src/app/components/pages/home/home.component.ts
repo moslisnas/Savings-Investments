@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Template } from '../../../models/Template';
 
 @Component({
   selector: 'app-home',
@@ -9,5 +10,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  lastTemplate: any = null; //"Year 2024"; //TODO --> Define Template class type
+  lastTemplate: Template = new Template(); //"Year 2024";
 }
